@@ -1,5 +1,7 @@
 /* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@200..700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -14,6 +16,13 @@ body {
     /* general projct styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /*header*/
@@ -80,31 +89,47 @@ nav {
     font-size: 2rem;
 }
 
-/*main*/
+/*main content */
 main {
-    /* make main element take up any surplus space footer */
+    /* Make main element take any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
-/* hero section */
+/* Hero section */
 #hero {
     height: 600px;
     width: 100%;
-    background: lightgreen;
-    background: url(../images/hero-image.webp)no-repeat center center/cover ;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparant */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #fff;
 }
 
 /*footer*/
 #social-networks {
     text-align: center;
-    padding: 20 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
 }
 
-#social-gitnetworks i {
+#social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
@@ -112,7 +137,7 @@ main {
 
 
 /* Media query: tablet and larger(768px and up) */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     /* Header */
     nav {
         display: block;
@@ -144,6 +169,12 @@ main {
     /* push main content down to accomodate the larger header */
     main {
         margin-top: 79px;
+    }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
     }
 }
 
