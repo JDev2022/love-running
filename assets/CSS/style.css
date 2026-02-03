@@ -135,7 +135,24 @@ main {
     color: #3a3a3a;
 }
 
+/* section #reasons */
+#reasons {
+    margin: 90% auto 20px auto;
+}
 
+#reasons > h2 {
+    font-size: 280px;
+}
+
+#benefits {
+    margin: 20px;
+}
+
+/* #benefit-physical, #benefit-mental {
+    line-height: 20px;
+    padding: 0 20px;
+
+}  */
 
 
 /* Media query: tablet and larger(768px and up) */
